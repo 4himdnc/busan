@@ -1,6 +1,6 @@
 # 샬롬하우스 (Shalom House) - 이주민을 위한 종합 지원 플랫폼
 
-![샬롬하우스 로고](https://img.shields.io/badge/Shalom%20House-이주민%20지원%20플랫폼-blue?style=for-the-badge)
+[![Deployed on Vercel](https://vercel.com/button)](https://busan-napiy50ee-4himdncs-projects.vercel.app)
 
 ## 📋 프로젝트 소개
 
@@ -291,3 +291,7 @@ npm start
 ---
 
 Made with ❤️ for immigrants in Korea 
+
+## 배포 상태
+- Production: https://busan-napiy50ee-4himdncs-projects.vercel.app
+- GitHub Repository: https://github.com/4himdnc/busan 
