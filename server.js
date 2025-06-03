@@ -48,7 +48,9 @@ app.use(cors({
             'https://shalomhouse.kr',
             'https://www.shalomhouse.kr',
             'http://localhost:3000',
-            'http://localhost:3001'
+            'http://localhost:3001',
+            'https://busan-myw85ns2s-4himdncs-projects.vercel.app',
+            'https://busan-4dan1o5cz-4himdncs-projects.vercel.app'
         ];
         
         if (!origin || allowedOrigins.includes(origin)) {
@@ -110,7 +112,12 @@ app.use('/api/upload', uploadRoutes);
 
 // 기본 라우트 - HTML 파일 제공
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/busan_index.html');
+    try {
+        res.sendFile('busan_index.html', { root: __dirname });
+    } catch (error) {
+        console.error('파일 전송 오류:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 // 헬스 체크 엔드포인트
